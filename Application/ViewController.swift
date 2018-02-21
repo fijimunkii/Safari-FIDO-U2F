@@ -53,8 +53,10 @@ class ViewController: NSViewController {
             
             DispatchQueue.main.async {
                 let label = state!.isEnabled ? "Enabled" : "Disabled"
+                let color = state!.isEnabled ? NSColor.greenColor() : NSColor.redColor()
                 print("Extension: \(label)")
                 self.extensionStatusLabel.stringValue = label
+                self.extensionStatusLabel.textColor = color
             }
             
         }
